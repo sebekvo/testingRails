@@ -16,7 +16,7 @@
     <% @rooms.each do |room| %>
       <tr>
         <td><%= room.title %></td>
-        <td><%= room.code_string %></td>
+        <td><%= room.code %></td>
         <td><%= room.building_id %></td>
         <td><%= link_to 'Show', room %></td>
         <td><%= link_to 'Edit', edit_room_path(room) %></td>

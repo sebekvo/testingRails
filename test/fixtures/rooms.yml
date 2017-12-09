@@ -2,10 +2,10 @@
 
 one:
   title: MyString
-  code_string: MyString
+  code: MyString
   building_id: 1
 
 two:
   title: MyString
-  code_string: MyString
+  code: MyString
   building_id: 1

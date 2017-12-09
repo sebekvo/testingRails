@@ -13,9 +13,10 @@
 <p>
   <strong>Rooms:</strong>
   <% @rooms.each do |room| %>
+    <p>
   <%= room.title %>
-  <%= room.code_string %>
-
+  <%= room.code %>
+    <p>
   <% end %>
 </p>
 
