@@ -1,5 +1,9 @@
 class Course < ApplicationRecord
   has_many :teacher_courses
+  has_many :teachers, through: :teacher_courses
+
+  has_many :student_courses
+  has_many :students, through: :student_courses
 
   extend Enumerize
 
@@ -9,6 +13,5 @@ class Course < ApplicationRecord
   validates :language_enum, presence: true
 
   enumerize :study_type_enum, in: {czech: "czech", english: "english"}
-  enumerize :language_enum, in: {full_time: "full_time", part_time: "part_time"}
 
 end
