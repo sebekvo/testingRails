@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171209173203) do
+ActiveRecord::Schema.define(version: 20171209180741) do
+
+  create_table "assignments_teachers_courses", id: false, force: :cascade do |t|
+    t.integer "teacher_id"
+    t.integer "course_id"
+  end
 
   create_table "buildings", force: :cascade do |t|
     t.string "title"
