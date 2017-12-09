@@ -3,15 +3,10 @@ class Room < ApplicationRecord
   has_many :lessons
 
 
-  HASH_NAME = {
-
-  }
-
-  @buildings = Building.all
-
-
-  @buildings.each do |b|
-    HASH_NAME["#{b.title}"] = b.id
+  BUILDING_NAMES = {}
+  buildings = Building.all
+  buildings.each do |b|
+    BUILDING_NAMES["#{b.title}"] = b.id
   end
 
 end

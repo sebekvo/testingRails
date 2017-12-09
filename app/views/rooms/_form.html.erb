@@ -10,7 +10,7 @@
     </div>
 
     <div class="form-actions">
-      <%= f.input :building_id, :collection => Room::HASH_NAME.sort.map {|k,v| [k,v]} %>
+      <%= f.input :building_id, :collection => Room::BUILDING_NAMES.sort.map {|k,v| [k,v]} %>
     </div>
 
     <div class="form-actions">
