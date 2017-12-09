@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  code: MyString
+  study_type_enum: MyString
+  language_enum: MyString
+
+two:
+  title: MyString
+  code: MyString
+  study_type_enum: MyString
+  language_enum: MyString
