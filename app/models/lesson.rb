@@ -8,13 +8,6 @@ class Lesson < ApplicationRecord
   validates :teacher_id, presence: true
   validates :room_id, presence: true
   validates :course_id, presence: true
-  validates :code, presence: true, uniqueness: true
-
-  ROOMS_NAMES = {}
-  rooms = Room.all
-  rooms.each do |b|
-    ROOMS_NAMES["#{b.title}"] = b.id
-  end
 
   TEACHERS_NAMES = {}
   teachers = Teacher.all
@@ -26,6 +19,12 @@ class Lesson < ApplicationRecord
   courses = Course.all
   courses.each do |b|
     COURSE_NAMES["#{b.title}"] = b.id
+  end
+
+  ROOMS_NAMES = {}
+  rooms = Room.all
+  rooms.each do |b|
+    ROOMS_NAMES["#{b.title}"] = b.id
   end
 
 end

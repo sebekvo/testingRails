@@ -69,6 +69,6 @@ class LessonsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lesson_params
-      params.require(:lesson).permit(:start_at, :end_at, :duration, :teacher_id, :room_id)
+      params.require(:lesson).permit(:start_at, :end_at, :duration, :teacher_id, :room_id, :course_id)
     end
 end
