@@ -6,6 +6,7 @@ class CreateLessons < ActiveRecord::Migration[5.1]
       t.integer :duration
       t.integer :teacher_id
       t.integer :room_id
+      t.integer :course_id
 
       t.timestamps
     end

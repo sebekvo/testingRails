@@ -10,6 +10,7 @@
       <th>Duration</th>
       <th>Teacher</th>
       <th>Room</th>
+      <th>Course</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,6 +23,7 @@
         <td><%= lesson.duration %></td>
         <td><%= lesson.teacher_id %></td>
         <td><%= lesson.room_id %></td>
+        <td><%= lesson.course_id %></td>
         <td><%= link_to 'Show', lesson %></td>
         <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
         <td><%= link_to 'Destroy', lesson, method: :delete, data: { confirm: 'Are you sure?' } %></td>

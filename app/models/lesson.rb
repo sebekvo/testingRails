@@ -14,4 +14,10 @@ class Lesson < ApplicationRecord
     TEACHERS_NAMES["#{b.first_name} #{b.last_name}"] = b.id
   end
 
+  COURSE_NAMES = {}
+  courses = Course.all
+  courses.each do |b|
+    COURSE_NAMES["#{b.title}"] = b.id
+  end
+
 end

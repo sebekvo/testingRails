@@ -6,6 +6,7 @@ one:
   duration: 1
   teacher_id: 1
   room_id: 1
+  course_id: 1
 
 two:
   start_at: 2017-12-09 18:30:20
@@ -13,3 +14,4 @@ two:
   duration: 1
   teacher_id: 1
   room_id: 1
+  course_id: 1

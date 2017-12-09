@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20171209183449) do
     t.integer "duration"
     t.integer "teacher_id"
     t.integer "room_id"
+    t.integer "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
