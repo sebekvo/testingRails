@@ -1,0 +1,13 @@
+<%= simple_form_for([:admin,@teacher_course]) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+
+    <%= f.input :teacher_id, :collection => TeacherCourse::TEACHERS_NAMES.sort.map {|k,v| [k,v]} %>
+    <%= f.input :course_id, :collection => TeacherCourse::COURSES_NAMES.sort.map {|k,v| [k,v]} %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

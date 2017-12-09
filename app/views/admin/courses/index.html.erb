@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Courses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Code</th>
+      <th>Study type enum</th>
+      <th>Language enum</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @courses.each do |course| %>
+      <tr>
+        <td><%= course.title %></td>
+        <td><%= course.code %></td>
+        <td><%= course.study_type_enum %></td>
+        <td><%= course.language_enum %></td>
+        <td><%= link_to 'Show', [:admin,course] %></td>
+        <td><%= link_to 'Edit', edit_admin_course_path(course) %></td>
+        <td><%= link_to 'Destroy', [:admin,course], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Course', new_admin_course_path %>
