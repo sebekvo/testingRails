@@ -10,5 +10,15 @@
   <%= @building.code %>
 </p>
 
+<p>
+  <strong>Rooms:</strong>
+  <% @rooms.each do |room| %>
+  <%= room.title %>
+  <%= room.code_string %>
+
+  <% end %>
+</p>
+
+
 <%= link_to 'Edit', edit_building_path(@building) %> |
 <%= link_to 'Back', buildings_path %>
