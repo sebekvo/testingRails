@@ -5,7 +5,7 @@
     <%= f.input :start_at %>
     <%= f.input :end_at %>
     <%= f.input :duration %>
-    <%= f.input :teacher_id %>
+    <%= f.input :teacher_id, :collection => Lesson::TEACHERS_NAMES.sort.map {|k,v| [k,v]} %>
     <%= f.input :room_id, :collection => Lesson::ROOMS_NAMES.sort.map {|k,v| [k,v]} %>
   </div>
 
