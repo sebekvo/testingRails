@@ -29,7 +29,7 @@ class RoomsController < Admin::AdminController
 
     respond_to do |format|
       if @room.save
-        format.html { redirect_to @room, notice: 'Room was successfully created.' }
+        format.html { redirect_to [:admin,@room], notice: 'Room was successfully created.' }
         format.json { render :show, status: :created, location: @room }
       else
         format.html { render :new }

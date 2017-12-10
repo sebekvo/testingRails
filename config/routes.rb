@@ -11,7 +11,9 @@ Rails.application.routes.draw do
     resources :rooms
   end
 
-  root to: 'buildings#index'
+  resources :buildings_preview
+
+  root to: 'buildings_preview#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

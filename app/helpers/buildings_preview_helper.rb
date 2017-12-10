@@ -1,0 +1,2 @@
+module BuildingsPreviewHelper
+end
