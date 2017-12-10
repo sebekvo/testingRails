@@ -9,9 +9,13 @@ Rails.application.routes.draw do
     resources :lessons
     resources :buildings
     resources :rooms
+    resources :dashboard
+
+    root to: 'dashboard#show'
   end
 
   resources :buildings_preview
+  resources :rooms_preview
 
   root to: 'buildings_preview#index'
 

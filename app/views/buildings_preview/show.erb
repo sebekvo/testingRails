@@ -3,5 +3,6 @@
 <% @rooms.each do |room| %>
     <div>
 <%= room.title %>
+      <%= link_to 'zobrazit rozvrh', rooms_preview_path %>
     </div>
 <% end %>

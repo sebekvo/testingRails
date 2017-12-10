@@ -4,6 +4,6 @@
 <% @buildings.each do |build| %>
 <div>
 <%=  build.title %>
-<%= link_to 'show', buildings_preview_path(build, :id => build.id) %>
+<%= link_to 'zobrazit', buildings_preview_path(build, :id => build.id) %>
 </div>
 <% end %>

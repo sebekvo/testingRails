@@ -1,0 +1,17 @@
+<h1>lessons at this room</h1>
+
+<% @lessons.each do |lesson| %>
+    <div>
+      <%= lesson.start_at %> <br>
+      <%= lesson.end_at %> <br>
+      <%= lesson.duration %> <br>
+      <%= lesson.teacher.first_name %>
+      <%= lesson.teacher.last_name %> <br>
+      <%= lesson.course.title %>
+      <br><br>
+
+    </div>
+<% end %>
+
+
+<%= @lessonsCount %>
