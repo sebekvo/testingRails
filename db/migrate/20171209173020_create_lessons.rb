@@ -7,6 +7,7 @@ class CreateLessons < ActiveRecord::Migration[5.1]
       t.integer :teacher_id
       t.integer :room_id
       t.integer :course_id
+      t.integer :week_day
 
       t.timestamps
     end

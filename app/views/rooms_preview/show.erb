@@ -1,5 +1,131 @@
 <h1>lessons at this room</h1>
 
+
+<%
+  lessonsMinutes = []
+  io = 1
+  @lessons.each do |lekce|
+
+  checkMinutes = [0,0.15,0.30,0.45]
+  h = 6
+
+  checkTimes = []
+  44.times do |i|
+    e = i % 4
+    if (e === 0)
+      h += 1;
+    end
+   checkTimes.push(h + checkMinutes[e])
+  end
+
+  connections = []
+  checkTimes.each do |hours,minutes|
+    if ("#{lekce.start_at.hour}.#{lekce.start_at.min}".to_f <= "#{hours}.#{minutes}".to_f && "#{lekce.end_at.hour}.#{lekce.end_at.min}".to_f >= "#{hours}.#{minutes}".to_f )
+      if ("#{lekce.start_at.hour}.#{lekce.start_at.min}".to_f == "#{hours}.#{minutes}".to_f || "#{lekce.end_at.hour}.#{lekce.end_at.min}".to_f == "#{hours}.#{minutes}".to_f )
+      connections.push(io)
+      else
+      connections.push(io)
+      end
+      else
+        connections.push(0)
+    end
+  end
+
+  lessonsMinutes.push(connections)
+  %>
+  <%= connections %>
+    <br>
+    <%
+      io += 1
+end
+
+lessonsMinutes.each do |less|
+  lessonsMinutes[0].each_with_index do |l,index|
+      if lessonsMinutes[0][index] == 0
+        lessonsMinutes[0][index] = less[index]
+      end
+    end
+end
+  %>
+
+
+<%= lessonsMinutes[0] %>
+
+<%
+  cols = []
+
+  first = true
+  ix = -1
+  change = nil
+  prev = lessonsMinutes[0][0]
+  lessonsMinutes[0].each_with_index do |i,index|
+    if (change == nil)
+      change = i
+    end
+
+
+    if change != i  || index == lessonsMinutes[0].length - 1
+      if prev == 0 && !first
+        ix += 2
+      end
+
+      if index == lessonsMinutes[0].length - 1
+        if !(prev == 0 && !first)
+          ix += 3
+        else
+          ix += 1
+        end
+      end
+
+
+      if first
+        first = false
+        ix += 1
+      end
+
+
+      change = i
+      cols.push([ix,prev])
+      ix = 0
+      else
+        ix += 1
+    end
+
+    prev = i
+  end
+
+%>
+
+<%= cols %>
+
+<table id="schedule">
+  <tr>
+    <td  colspan="4"></td>
+    <td  colspan="4">7:00- 8:00</td>
+    <td  colspan="4">8:00 - 9:00</td>
+    <td colspan="4">9:00 - 10:00</td>
+    <td  colspan="4">10:00 - 11:00</td>
+    <td  colspan="4">11:00 - 12:00</td>
+    <td  colspan="4">12:00 - 13:00</td>
+    <td  colspan="4">13:00 - 14:00</td>
+    <td  colspan="4">14:00 - 15:00</td>
+    <td  colspan="4">15:00 - 16:00</td>
+    <td  colspan="4">16:00 - 17:00</td>
+    <td  colspan="4">17:00 - 18:00</td>
+  </tr>
+  <tr>
+    <td  colspan="4">pondělí</td>
+  <% cols.each do |col| %>
+    <% if col[1] != 0 %>
+      <td class="active" colspan="<%= col[0] %>"> <%= @lessons[col[1]-1].course.title %> <br> <%= "#{@lessons[col[1]-1].start_at.hour}:#{@lessons[col[1]-1].start_at.min}" %> -  <%= "#{@lessons[col[1]-1].end_at.hour}:#{@lessons[col[1]-1].end_at.min}"  %> </td>
+    <% else %>
+            <td  colspan="<%= col[0] %>">  </td>
+    <% end %>
+  <% end %>
+  </tr>
+</table>
+
+
 <% @lessons.each do |lesson| %>
     <div>
       <%= lesson.start_at %> <br>
