@@ -1,9 +1,20 @@
-<h1>intro</h1>
+<h1>Přehled budov</h1>
 
 
 <% @buildings.each do |build| %>
-<div>
-<%=  build.title %>
-<%= link_to 'zobrazit', buildings_preview_path(build, :id => build.id) %>
-</div>
+
+<%#=  build.title %>
+<%#= link_to 'zobrazit', buildings_preview_path(build, :id => build.id) %>
+
+    <article class="building">
+      <div class="buildingHEader ">
+        <%=  build.title %>
+      </div>
+      <%= image_tag("build1.png", :alt => "building img") %>
+      <br><br>
+      <%= link_to 'zobrazit', buildings_preview_path(build, :id => build.id), :class => 'buildingLink' %>
+    </article>
+
+
 <% end %>
+

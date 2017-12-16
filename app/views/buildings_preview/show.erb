@@ -1,8 +1,40 @@
 <h1>detail of building</h1>
 
+<table id="forumTable">
+  <tr>
+    <td>
+      id Místnosti
+    </td>
+    <td>
+      název
+    </td>
+    <td>
+      umístění
+    </td>
+    <td>
+      <a> více </a>
+    </td>
+  </tr>
+
 <% @rooms.each do |room| %>
-    <div>
-<%= room.title %>
-      <%= link_to 'zobrazit rozvrh', rooms_preview_path %>
-    </div>
+
+      <tr>
+        <td>
+          <%= room.id %>
+        </td>
+        <td>
+          <%= room.title %>
+        </td>
+        <td>
+          <%= room.code %>
+        </td>
+        <td>
+          <%= link_to 'zobrazit rozvrh', rooms_preview_path %>
+        </td>
+      </tr>
+
+
 <% end %>
+
+
+</table>

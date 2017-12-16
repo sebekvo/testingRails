@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/sebekvo/.idea/sebekvo.iml" filepath="$USER_HOME$/sebekvo/.idea/sebekvo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/sebekvorails.iml" filepath="$PROJECT_DIR$/.idea/sebekvorails.iml" />
     </modules>
   </component>

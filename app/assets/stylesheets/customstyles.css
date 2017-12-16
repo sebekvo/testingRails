@@ -1,0 +1,343 @@
+#name {
+    font-size: 20px;
+    color: dodgerblue;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    padding-bottom: 5px
+}
+
+#schedule {
+    background: rgb(250, 250, 250);
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.buildingLink {
+    margin-left: 85px;
+    font-size: 20px;
+}
+
+#sideBar {
+    color: dodgerblue;
+    float: left;
+    position: absolute;
+    background: rgb(50, 50, 50);
+    padding: 5px;
+}
+
+#schedule td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px
+}
+
+#schedule .active {
+    background: dodgerBlue;
+}
+
+#schedule tr {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#schedule tr:nth-child(1) {
+    background: rgb(200, 200, 200);
+}
+
+#schedule td:nth-child(1) {
+    background: rgb(200, 200, 200);
+}
+
+.building {
+    width: 250px;
+    height: 400px;
+    background: rgb(250, 250, 250);
+    border: 4px solid black;
+    border-radius: 11px;
+    float: left;
+    margin: 15px;
+}
+
+.building img {
+    width: 80%;
+    border-radius: 200px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20%
+}
+
+.buildingHEader {
+    width: 100%;
+    height: 40px;
+    background: rgb(50, 50, 50);
+    border-radius: 6px 6px 0 0;
+    color: dodgerblue;
+    text-align: center;
+    padding-top: 4px;
+    font-size: 25px
+}
+
+#breadcrumbs a {
+    color: dodgerBlue;
+}
+
+#breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+td {
+    width: auto;
+}
+
+body {
+    background-color: rgb(50, 50, 70);
+    background-color: rgb(225, 225, 225);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: black;
+    font-size: 87.5%;
+    font-family: Arial, 'Lucida Sans Unicode';
+    line-height: 1.5;
+    text-align: left;
+}
+
+a {}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+/*
+.content nav a:hover .content nav a:active .content nav .active a:ling .content nav .active a:visited{
+*/
+
+.body {
+    margin: 0;
+    width: 100%;
+    clear: both;
+}
+
+.mainHeader img {
+    width: 25%;
+    height: auto;
+}
+
+.mainHeader nav {
+    background-color: rgb(50, 50, 50);
+    height: 50px;
+}
+
+.mainHeader nav ul {
+    list-style: none;
+}
+
+.mainHeader nav ul li {
+    float: left;
+    display: inline;
+}
+
+.mainHeader nav a:link, .mainHeader nav:visited {
+    border-bottom: 2px solid transparent;
+    color: #FFF;
+    color: aquamarine;
+    color: dodgerblue;
+    display: inline-block;
+    padding: 10px 25px;
+    height: 20px;
+}
+
+.mainHeader nav a:hover, .mainHeader nav a:active .mainHeader nav .active a:link, .mainHeader nav .active a:visited {
+    border-bottom: 2px solid dodgerblue;
+    text-shadow: none;
+    color: dodgerblue;
+    transition: 0.2s;
+}
+
+.mainHeader nav ul li a {}
+
+.secondaryHeader nav a:link, .secondaryHeader nav:visited, nav a {
+    border: none;
+    color: dodgerblue;
+    display: inline-block;
+    padding-left: 0px;
+    height: 20px;
+}
+
+.secondaryHeader nav a:hover, .secondaryHeader nav a:active .secondaryHeader nav .active a:link, .secondaryHeader nav .active {
+    border: none;
+    text-shadow: none;
+    color: red;
+    transition: 0.2s;
+}
+
+.mainHeader nav {
+    background-color: rgb(50, 50, 50);
+    height: 50px;
+}
+
+.mainHeader #menu {
+    margin-left: 1%;
+}
+
+#menu {
+    padding-top: 5px
+}
+
+.middleSidebar {
+    background-color: rgba(245, 245, 245, 0.8);
+    min-height: 1000px;
+    overflow-y: auto;
+}
+
+#customFooter {
+    background-color: rgb(50, 50, 50);
+    color: white;
+    padding: 20px;
+    text-align: left
+}
+
+.mainFooter {
+    width: 100%;
+    float: left;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: black;
+}
+
+.mainFooter p {
+    width: 92%;
+    margin: 0% auto;
+    color: #FFF;
+}
+
+#mid {
+    width: 73%;
+    margin: auto;
+    height: auto;
+}
+
+#mid h1 {
+    font-size: 30px
+}
+
+#forumTable {
+    page-break-inside: auto;
+    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+    border: 0px solid lightgrey;
+}
+
+#forumTable td {
+    width: auto;
+}
+
+#forumTable tr:nth-child(n+2):hover {
+    background: rgb(50, 50, 50);
+    color: white;
+    transition: 0.3s;
+    page-break-inside: avoid;
+    page-break-after: auto;
+}
+
+#forumTable tr:nth-child(2n + 1) {
+    background: rgb(230, 230, 230);
+}
+
+#forumTable thead {
+    display: table-header-group
+}
+
+#forumTable tfoot {
+    display: table-footer-group
+}
+
+#forumTable tr:nth-child(1) {
+    background: rgb(200, 200, 200);
+}
+
+#forumTable td {}
+
+#forumTable img {
+    width: 10%;
+    margin-right: 2%;
+    float: left;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+    .mainHeader nav {
+        height: 100px;
+    }
+    #mid {
+        width: 99%
+    }
+}
+
+@media only screen and (min-width: 150px) and (max-width: 600px) {
+    .building {
+        width: 93%;
+        height: auto;
+    }
+    .buildingLink {
+        visibility: hidden;
+    }
+    #mid {
+        width: 99%
+    }
+    #sideBar {
+        position: absolute;
+    }
+    .body {
+        font-size: 95%;
+        margin-bottom: 0;
+    }
+    #menu li {
+        width: 97%;
+    }
+    .mainHeader nav ul li {}
+    .mainHeader nav ul {
+        padding-left: 0;
+    }
+    .mainHeader nav ul li {
+        width: 100%;
+        text-align: center;
+        background-color: none;
+        padding: 0px;
+        margin: 0 0.5%
+    }
+    .mainHeader nav ul li a:last-child {
+        background-color: rgb(50, 50, 50);
+        width: 93%
+    }
+    .mainHeader nav ul li:last-child {
+        margin-bottom: 45px
+    }
+    .mainHeader nav {
+        background: none
+    }
+    .mainHeader nav a:link, .mainHeader nav:visited {
+        padding: 10px 25px;
+        height: 20px;
+        display: block;
+    }
+    .middleSidebar {
+        padding: 0% 0%;
+        border-left: 0em solid lightgray;
+        border-top: 0.1em solid lightgray;
+    }
+    .mainHeader #menu {
+        margin-left: 0%;
+    }
+    .mainHeader nav {
+        height: 70px;
+        margin-bottom: 20px;
+    }
+    .mainHeader nav ul li:last-child {
+        height: 0;
+    }
+}

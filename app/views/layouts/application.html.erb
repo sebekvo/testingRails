@@ -1,28 +1,41 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Sebekvorails</title>
-    <%= csrf_meta_tags %>
+ <!DOCTYPE html>
+  <html lang="en">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+
+    <%= stylesheet_link_tag "customstyles" %>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
   </head>
 
-  <p>
-    menu
-    <%= link_to "Buildings", admin_buildings_path %>
-    <%= link_to "Rooms", admin_rooms_path %>
-    <%= link_to "Lessons", admin_lessons_path %>
-    <%= link_to "Teachers", admin_teachers_path %>
-    <%= link_to "Courses", admin_courses_path %>
-    <%= link_to "Teacher-Course", admin_teacher_courses_path %>
-    <%= link_to "Students", admin_students_path %>
-    <%= link_to "Students-Course", admin_student_courses_path %>
-    <hr>
+<body class="body">
 
-  </p>
+<header class="mainHeader">
+  <nav>
+    <ul id="menu">
+      <li id="name"> <a href="index.html">WEB</a> </li>
+      <li><a href="index.html">Budovy</a></li>
+      <li><a href="rooms.html">Místnosti</a></li>
+    </ul>
+  </nav>
 
-  <body>
+</header>
+<header id="breadcrumbs">
+  <a href="index.html"> Budovy </a>
+</header>
+<section class="middleSidebar">
+  <article id="mid">
+
     <%= yield %>
-  </body>
+
+  </article>
+</section>
+<footer id="customFooter">
+  © copyrigt
+</footer>
+</body>
+
 </html>
+

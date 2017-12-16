@@ -29,7 +29,7 @@ class TeacherCoursesController < Admin::AdminController
 
     respond_to do |format|
       if @teacher_course.save
-        format.html { redirect_to @teacher_course, notice: 'Teacher course was successfully created.' }
+        format.html { redirect_to [:admin,@teacher_course], notice: 'Teacher course was successfully created.' }
         format.json { render :show, status: :created, location: @teacher_course }
       else
         format.html { render :new }
