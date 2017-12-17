@@ -8,9 +8,10 @@
 
     <article class="building">
       <div class="buildingHEader ">
-        <%=  build.title %>
+        <%= link_to build.title, buildings_preview_path(build, :id => build.id) %>
       </div>
-      <%= image_tag("build1.png", :alt => "building img") %>
+
+      <%= link_to image_tag("build1.png", :alt => "building img"), buildings_preview_path(build, :id => build.id) %>
       <br><br>
       <%= link_to 'zobrazit', buildings_preview_path(build, :id => build.id), :class => 'buildingLink' %>
     </article>

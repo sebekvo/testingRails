@@ -12,11 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20171209222843) do
 
-  create_table "assignments_teachers_courses", id: false, force: :cascade do |t|
-    t.integer "teacher_id"
-    t.integer "course_id"
-  end
-
   create_table "buildings", force: :cascade do |t|
     t.string "title"
     t.string "code"
@@ -40,6 +35,7 @@ ActiveRecord::Schema.define(version: 20171209222843) do
     t.integer "teacher_id"
     t.integer "room_id"
     t.integer "course_id"
+    t.integer "week_day"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

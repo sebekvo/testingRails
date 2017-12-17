@@ -26,7 +26,7 @@
         <td><%= lesson.course_id %></td>
         <td><%= link_to 'Show', [:admin,lesson] %></td>
         <td><%= link_to 'Edit', edit_admin_lesson_path(lesson) %></td>
-        <td><%= link_to 'Destroy', [:admin,lesson], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', [:admin,lesson], confirm: 'Are you sure?', method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
