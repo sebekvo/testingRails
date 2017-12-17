@@ -17,13 +17,18 @@
     <ul id="menu">
       <li id="name"> <%= link_to "WEB", root_path %></li>
       <li><%= link_to "Budovy", root_path %></li>
-      <li><a href="rooms.html">Místnosti</a></li>
+      <li><%= link_to "Dashboard", "/admin" %></li>
     </ul>
   </nav>
 
 </header>
 <header id="breadcrumbs">
-  <a href="index.html"> Budovy </a>
+  <%= link_to "Budovy", root_path %>
+  <%
+  if request.path.split("/")[1] == "rooms_preview" && request.path.split("/")[2]%>
+  <%=  link_to "/ místnost", buildings_preview_path(:id => @thisRoom.building_id ) %>
+  <% end %>
+
 </header>
 <section class="middleSidebar">
   <article id="mid">
