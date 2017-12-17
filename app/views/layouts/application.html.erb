@@ -31,7 +31,6 @@
     <br>
     <%
       if request.path.split("/")[1] == "admin"
-
         %>
         <%= link_to "Dashboard", "/admin" %>
         <%= link_to "Buildings (#{Building.all.count})", admin_buildings_path %>

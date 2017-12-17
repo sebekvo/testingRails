@@ -1,5 +1,22 @@
 
+<% Lesson.all.each do |lesson|
+%>
 
+ lekce: <%= lesson.course.title %> <br>
+  studenti: <br>
+    <ul>
+<%  lesson.course.students.each do |student|
+%>
+<li>
+  <%= student.first_name %>
+        <%= student.last_name %>
+</li>
 
+<%
+  end
+  %>
+  </ul>
+    <%
+  end %>
 
 
