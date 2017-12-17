@@ -19,7 +19,7 @@
 
 <%
 
-  weekDays = ["neděle", "pondělí","úterý","středa","štvrtek","pátek","sobota"]
+  weekDays = ["pondělí","úterý","středa","čtvrtek","pátek","sobota", "neděle"]
   #dayIndex = 1
 
   days = [[],[],[],[],[],[],[]]
@@ -28,9 +28,11 @@
     days[less.start_at.wday].push(less)
   end
 
+  days.push(days[0])
+  days.shift
+
   %>
 
-    <%= days[1].length %>
 
 <%
 
@@ -67,8 +69,8 @@
 
   lessonsMinutes.push(connections)
   %>
-  <%= connections %>
-    <br>
+
+
     <%
       io += 1
 end
@@ -83,7 +85,6 @@ end
   %>
 
 
-<%= lessonsMinutes[0] %>
 
 <%
   cols = []
@@ -98,6 +99,10 @@ end
   lessonsMinutes[0].each_with_index do |i,index|
     if (change == nil)
       change = i
+    end
+
+    if index == lessonsMinutes[0].length - 1 && prev != 0
+      ix += 1
     end
 
 

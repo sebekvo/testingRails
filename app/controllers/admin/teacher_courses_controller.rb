@@ -43,7 +43,7 @@ class TeacherCoursesController < Admin::AdminController
   def update
     respond_to do |format|
       if @teacher_course.update(teacher_course_params)
-        format.html { redirect_to @teacher_course, notice: 'Teacher course was successfully updated.' }
+        format.html { redirect_to [:admin,@teacher_course], notice: 'Teacher course was successfully updated.' }
         format.json { render :show, status: :ok, location: @teacher_course }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class TeacherCoursesController < Admin::AdminController
   def destroy
     @teacher_course.destroy
     respond_to do |format|
-      format.html { redirect_to teacher_courses_url, notice: 'Teacher course was successfully destroyed.' }
+      format.html { redirect_to [:admin,teacher_courses_url], notice: 'Teacher course was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
