@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   resources :buildings_preview
   resources :rooms_preview
 
+  get '/buildings_preview/:id/today' => 'buildings_preview#today', :as => :today_action
+
   root to: 'buildings_preview#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -15,8 +15,8 @@
 <header class="mainHeader">
   <nav>
     <ul id="menu">
-      <li id="name"> <a href="index.html">WEB</a> </li>
-      <li><a href="index.html">Budovy</a></li>
+      <li id="name"> <%= link_to "WEB", root_path %></li>
+      <li><%= link_to "Budovy", root_path %></li>
       <li><a href="rooms.html">Místnosti</a></li>
     </ul>
   </nav>
@@ -28,6 +28,24 @@
 <section class="middleSidebar">
   <article id="mid">
 
+    <br>
+    <%
+      if request.path.split("/")[1] == "admin"
+
+        %>
+        <%= link_to "Dashboard", "/admin" %>
+        <%= link_to "Buildings (#{Building.all.count})", admin_buildings_path %>
+        <%= link_to "Rooms (#{Room.all.count})", admin_rooms_path %>
+        <%= link_to "Lessons (#{Lesson.all.count})", admin_lessons_path %>
+        <%= link_to "Teachers (#{Teacher.all.count})", admin_teachers_path %>
+        <%= link_to "Courses (#{Course.all.count})", admin_courses_path %>
+        <%= link_to "Teacher-Course (#{TeacherCourse.all.count})", admin_teacher_courses_path %>
+        <%= link_to "Students (#{Student.all.count})", admin_students_path %>
+        <%= link_to "Students-Course (#{StudentCourse.all.count})", admin_student_courses_path %>
+        <hr>
+      <%
+      end
+      %>
     <%= yield %>
 
   </article>

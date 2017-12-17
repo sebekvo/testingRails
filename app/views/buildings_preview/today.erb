@@ -1,0 +1,46 @@
+today
+
+<table id="forumTable">
+  <tr>
+    <td>
+      id rezervace
+    </td>
+    <td>
+      název
+    </td>
+    <td>
+      čas
+    </td>
+    <td>
+      místnost
+    </td>
+    <td>
+      počet studentů
+    </td>
+  </tr>
+  <% @rooms.each do |room|
+    room.lessons.each do |lesson|
+%>
+          <tr>
+            <td>
+        <%= lesson.id %>
+            </td>
+          <td>
+            <%= lesson.course.title %>
+          </td>
+          <td>
+            <%= "#{lesson.start_at.hour}:#{lesson.start_at.min}" %> -  <%= "#{lesson.end_at.hour}:#{lesson.end_at.min}" %>
+          </td>
+          <td>
+            <%= lesson.room.code %>
+          </td>
+            <td>
+              <%= lesson.course.students.count %>
+            </td>
+          </tr>
+<%
+  end
+end
+%>
+
+</table>

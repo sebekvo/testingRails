@@ -1,5 +1,10 @@
 <h1>detail of building</h1>
 
+<aside id="sideBar">
+ <%= link_to "Zobrazit dnešní program", :controller => :buildings_preview, :action => :today %>
+
+</aside>
+
 <table id="forumTable">
   <tr>
     <td>
@@ -29,7 +34,7 @@
           <%= room.code %>
         </td>
         <td>
-          <%= link_to 'zobrazit rozvrh', rooms_preview_path %>
+          <%= link_to 'zobrazit rozvrh', rooms_preview_path(:id => room.id)  %>
         </td>
       </tr>
 

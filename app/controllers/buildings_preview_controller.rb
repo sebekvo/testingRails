@@ -8,4 +8,8 @@ class BuildingsPreviewController < ApplicationController
     @rooms = Room.where(:building_id => params[:id])
   end
 
+  def today
+    @rooms = Room.where(:building_id => params[:id])
+  end
+
 end
